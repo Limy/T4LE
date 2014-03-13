@@ -1,4 +1,6 @@
-T4LE
+Tools For Learning English
 ====
 
-A set of tools for learning english.
+Work in progress.
+
+* dict.py: HyperTranslate
