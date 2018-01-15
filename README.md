@@ -1,6 +1,10 @@
-Tools For Learning English
+Tools For Learning English (WIP)
 ====
 
-Work in progress.
+## fanyi.py: A simple translation tool with text-to-speech support
 
-* dict.py: HyperTranslate
+### requiements
+
+* Python 3 (test with Python 3.6.4)
+* xsel
+* notify-send
