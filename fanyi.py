@@ -14,6 +14,7 @@ import os
 import argparse
 from concurrent import futures
 
+# Todo Use environment variable store api key
 # api key for baidu fanyi
 FY_APPID = 'your baidu fanyi app id'
 FY_APIKEY = 'your baidu fanyi api key'
@@ -38,7 +39,9 @@ def checkout(cmd: list) -> str:
 
 def get_token() -> str:
     """Return the valid Baidu Yuyin access token."""
-    with shelve.open('token.db', writeback=True) as t:
+    # todo BUG db path
+    token_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'token.db')
+    with shelve.open(token_file, writeback=True) as t:
         if all(k in t for k in ['token', 'expire_time']) and (t['expire_time'] > datetime.datetime.now()):
             return t['token']
         else:
