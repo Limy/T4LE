@@ -16,13 +16,13 @@ from concurrent import futures
 
 # Todo Use environment variable store api key
 # api key for baidu fanyi
-FY_APPID = 'your baidu fanyi app id'
-FY_APIKEY = 'your baidu fanyi api key'
+FY_APPID = os.environ.get('FY_APPID', 'your baidu fanyi app id')
+FY_APIKEY = os.environ.get('FY_APIKEY', 'your baidu fanyi api key')
 FY_BASE_URL = 'https://api.fanyi.baidu.com/api/trans/vip/translate'
 
 # api key for baidu yuyin
-YY_APPKEY = 'your baidu yuyin app key'
-YY_SECRETKEY = 'your baidu yuyin secret key'
+YY_APPKEY = os.environ.get('YY_APPKEY', 'your baidu yuyin app key')
+YY_SECRETKEY = os.environ.get('YY_SECRETKEY', 'your baidu yuyin secret key')
 YY_TOKEN_URL = 'https://openapi.baidu.com/oauth/2.0/token'
 YY_BASE_URL = 'https://tsn.baidu.com/text2audio'
 
